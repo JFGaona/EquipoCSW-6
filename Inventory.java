@@ -1,5 +1,3 @@
-package LowLevelDesign.DesignVendingMachine;
-
 public class Inventory {
 
     ItemShelf[] inventory = null;

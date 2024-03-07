@@ -1,4 +1,3 @@
-package LowLevelDesign.DesignVendingMachine;
 
 public enum ItemType {
 

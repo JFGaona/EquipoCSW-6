@@ -1,4 +1,3 @@
-package LowLevelDesign.DesignVendingMachine;
 
 import LowLevelDesign.DesignVendingMachine.VendingStates.State;
 import LowLevelDesign.DesignVendingMachine.VendingStates.impl.IdleState;
