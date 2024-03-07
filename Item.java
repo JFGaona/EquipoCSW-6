@@ -1,4 +1,3 @@
-package LowLevelDesign.DesignVendingMachine;
 
 public class Item {
     ItemType type;

@@ -1,4 +1,3 @@
-package LowLevelDesign.DesignVendingMachine.VendingStates;
 
 import LowLevelDesign.DesignVendingMachine.Coin;
 import LowLevelDesign.DesignVendingMachine.Item;

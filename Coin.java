@@ -1,4 +1,3 @@
-package LowLevelDesign.DesignVendingMachine;
 
 public enum Coin {
 
@@ -13,3 +12,4 @@ public enum Coin {
         this.value = value;
     }
 }
+
