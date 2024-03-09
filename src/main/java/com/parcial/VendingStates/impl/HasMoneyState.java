@@ -1,15 +1,16 @@
+package com.parcial.VendingStates.impl;
 
-import LowLevelDesign.DesignVendingMachine.Coin;
-import LowLevelDesign.DesignVendingMachine.Item;
-import LowLevelDesign.DesignVendingMachine.VendingMachine;
-import LowLevelDesign.DesignVendingMachine.VendingStates.State;
-import LowLevelDesign.DesignVendingMachine.VendingMachine;
+import com.parcial.Coin;
+import com.parcial.Item;
+import com.parcial.VendingMachine;
+import com.parcial.VendingStates.State;
+import com.parcial.VendingMachine;
 
 import java.util.List;
 
 public class HasMoneyState implements State {
 
-    public HasMoneyState(){
+    public HasMoneyState() {
         System.out.println("Currently Vending machine is in HasMoneyState");
     }
 

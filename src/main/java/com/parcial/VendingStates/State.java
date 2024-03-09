@@ -1,7 +1,8 @@
+package com.parcial.VendingStates;
 
-import Coin;
-import Item;
-import VendingMachine;
+import com.parcial.Coin;
+import com.parcial.Item;
+import com.parcial.VendingMachine;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ public interface State {
 
     public void clickOnStartProductSelectionButton(VendingMachine machine) throws Exception;
 
-    public void insertCoin(VendingMachine machine , Coin coin) throws Exception;
+    public void insertCoin(VendingMachine machine, Coin coin) throws Exception;
 
     public void chooseProduct(VendingMachine machine, int codeNumber) throws Exception;
 
@@ -22,6 +23,5 @@ public interface State {
     public List<Coin> refundFullMoney(VendingMachine machine) throws Exception;
 
     public void updateInventory(VendingMachine machine, Item item, int codeNumber) throws Exception;
-
 
 }

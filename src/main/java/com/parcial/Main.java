@@ -1,9 +1,10 @@
-import vendingMachine.State;
+package com.parcial;
 
+import com.parcial.VendingStates.State;
 
 public class Main {
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
 
         VendingMachine vendingMachine = new VendingMachine();
         try {
@@ -25,7 +26,7 @@ public class Main {
             vendingState = vendingMachine.getVendingMachineState();
             vendingState.insertCoin(vendingMachine, Coin.NICKEL);
             vendingState.insertCoin(vendingMachine, Coin.QUARTER);
-           // vendingState.insertCoin(vendingMachine, Coin.NICKEL);
+            // vendingState.insertCoin(vendingMachine, Coin.NICKEL);
 
             System.out.println("|");
             System.out.println("clicking on ProductSelectionButton");
@@ -37,28 +38,26 @@ public class Main {
 
             displayInventory(vendingMachine);
 
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             displayInventory(vendingMachine);
         }
 
-
     }
 
-    private static void fillUpInventory(VendingMachine vendingMachine){
+    private static void fillUpInventory(VendingMachine vendingMachine) {
         ItemShelf[] slots = vendingMachine.getInventory().getInventory();
         for (int i = 0; i < slots.length; i++) {
             Item newItem = new Item();
-            if(i >=0 && i<3) {
+            if (i >= 0 && i < 3) {
                 newItem.setType(ItemType.COKE);
                 newItem.setPrice(12);
-            }else if(i >=3 && i<5){
+            } else if (i >= 3 && i < 5) {
                 newItem.setType(ItemType.PEPSI);
                 newItem.setPrice(9);
-            }else if(i >=5 && i<7){
+            } else if (i >= 5 && i < 7) {
                 newItem.setType(ItemType.JUICE);
                 newItem.setPrice(13);
-            }else if(i >=7 && i<10){
+            } else if (i >= 7 && i < 10) {
                 newItem.setType(ItemType.SODA);
                 newItem.setPrice(7);
             }
@@ -67,7 +66,7 @@ public class Main {
         }
     }
 
-    private static void displayInventory(VendingMachine vendingMachine){
+    private static void displayInventory(VendingMachine vendingMachine) {
 
         ItemShelf[] slots = vendingMachine.getInventory().getInventory();
         for (int i = 0; i < slots.length; i++) {
