@@ -1,5 +1,4 @@
-
-import LowLevelDesign.DesignVendingMachine.VendingStates.State;
+import vendingMachine.State;
 
 
 public class Main {

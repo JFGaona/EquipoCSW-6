@@ -1,43 +1,21 @@
-
-import LowLevelDesign.DesignVendingMachine.VendingStates.State;
-import LowLevelDesign.DesignVendingMachine.VendingStates.impl.IdleState;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class VendingMachine {
+    private AuthenticationService authService;
+    private boolean isAuthenticated = false;
 
-    private State vendingMachineState;
-    private Inventory inventory;
-    private List<Coin> coinList;
-
-    public VendingMachine(){
-        vendingMachineState = new IdleState();
-        inventory = new Inventory(10);
-        coinList = new ArrayList<>();
+    public VendingMachine() {
+        this.authService = new UserPasswordAuthenticationService();
+        // Inicialización existente...
     }
 
-    public State getVendingMachineState() {
-        return vendingMachineState;
+    public void authenticateUser(String username, String password) {
+        isAuthenticated = authService.authenticate(username, password);
+        if (isAuthenticated) {
+            System.out.println("Autenticación exitosa. Acceso a funcionalidades administrativas permitido.");
+        } else {
+            System.out.println("Autenticación fallida. Por favor, intente de nuevo.");
+        }
     }
 
-    public void setVendingMachineState(State vendingMachineState) {
-        this.vendingMachineState = vendingMachineState;
-    }
-
-    public Inventory getInventory() {
-        return inventory;
-    }
-
-    public void setInventory(Inventory inventory) {
-        this.inventory = inventory;
-    }
-
-    public List<Coin> getCoinList() {
-        return coinList;
-    }
-
-    public void setCoinList(List<Coin> coinList) {
-        this.coinList = coinList;
-    }
+    // Asegurarse de que las acciones administrativas verifiquen `isAuthenticated`
+    // antes de proceder
 }

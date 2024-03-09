@@ -1,8 +1,3 @@
+public class ItemType {
 
-public enum ItemType {
-
-    COKE,
-    PEPSI,
-    JUICE,
-    SODA;
 }

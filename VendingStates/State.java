@@ -1,7 +1,7 @@
 
-import LowLevelDesign.DesignVendingMachine.Coin;
-import LowLevelDesign.DesignVendingMachine.Item;
-import LowLevelDesign.DesignVendingMachine.VendingMachine;
+import Coin;
+import Item;
+import VendingMachine;
 
 import java.util.List;
 
